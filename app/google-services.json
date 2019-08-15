@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "795620981754",
+    "firebase_url": "https://osekeapp.firebaseio.com",
+    "project_id": "osekeapp",
+    "storage_bucket": "osekeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795620981754:android:98997113f1ee04bb",
+        "android_client_info": {
+          "package_name": "com.example.osekeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795620981754-88sfc6ptstdnfukctbqa05ovkploh72u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.osekeapp",
+            "certificate_hash": "8e8065f2e92d586dae4f1dc8dea3cc7a19947cb2"
+          }
+        },
+        {
+          "client_id": "795620981754-dl61fqlkht334rccn0k3p44ekqb77n3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuF2hiPrhm2nA_ymux8Z7Rci6_POlaORU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795620981754-dl61fqlkht334rccn0k3p44ekqb77n3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
