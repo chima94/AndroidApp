@@ -3,6 +3,7 @@ package com.example.osekeapp;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,6 +54,35 @@ import java.util.List;
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                }
+            });
+        }
+
+        public void AddBook(bookClass book, final DataStatus dataStatus){
+            String key = databaseReference.push().getKey();
+            databaseReference.child(key).setValue(book).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    dataStatus.DataIsInserted();
+                }
+            });
+        }
+
+        public void UpdateBook(String key, bookClass book, final DataStatus dataStatus){
+            databaseReference.child(key).setValue(book).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    dataStatus.DataIsUpdated();
+                }
+            });
+        }
+
+
+        public void DeleteBook(String key, final DataStatus dataStatus){
+            databaseReference.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    dataStatus.DataIsDeleted();
                 }
             });
         }
